@@ -26,10 +26,10 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div className="md:col-span-8 group relative overflow-hidden bg-surface-container-low rounded-xl h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10"></div>
-              <img alt="Civil Engineering" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="large scale construction site with cranes and steel framework during sunset with industrial atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTNTWwSBY86RBg-1ZnMByM9CyOnQNMtjPoD9xPi9-9HL_7_OlkSyGclZjoVcBcWQsttDELT_3sbZw_o4nhugY3fHiU9XT7vyeEuUwlSFrv9k9x_RmHz2_XcnCmAW91je7gbQy51Rqztv-YbRZHT1ln0Xp_H2r2vf0gCRiHcsLI8l8Crb4kvGtvFYNTo3sktzWuVYen-if0NP_UzigMnuEDDVKDMA3z73uCWsQMJNtR8bI6oRGutFHdN6RO8uRD5s752xHz2WdS9tt4"/>
+              <img alt="Architecture" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/assets/services/img35.jpg"/>
               <div className="absolute bottom-0 left-0 p-12 z-20">
                 <span className="material-symbols-outlined text-white text-5xl mb-6" data-icon="foundation">foundation</span>
-                <h3 className="text-4xl font-bold text-white mb-4">Civil Infrastructure</h3>
+                <h3 className="text-4xl font-bold text-white mb-4">Architecture</h3>
                 <p className="text-white/80 max-w-md mb-6">Structural development, foundation engineering, and heavy machinery logistics for industrial facilities.</p>
                 <button className="bg-white text-primary px-8 py-3 font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-primary hover:text-white transition-colors">View Projects</button>
               </div>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
 
             <div className="md:col-span-8 group relative overflow-hidden bg-surface-container-low rounded-xl h-[400px]">
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10"></div>
-              <img alt="Interior Design" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="minimalist corporate office interior with architectural lighting, wood panels, and large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAypYUTtErRpR34ycRyxaJLO9Bf2RuzE2pM5ueH66zSDUCfijJH3J5I4gMIzDyGeynZbczimTrVu0nBGGcFNn0eavnNdZYT2XCr0lwKggD5YLGjd625EJrGSI_vODcOTMdikDNO29vuL9H-lLxDI3foB1mhI07Ns9RQTw_oht8rm_cWiRipVPCF7IA7OVf2zu4i_i5G42xvrTYVjp-Tye2Dpgx880OcLD6dOheSi_jmb3Fkz5Yrph-HoB4hZNINb9VJg_umGjE76x-2"/>
+              <img alt="Interior Design" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/assets/portofolio/img235.jpg"/>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-12 z-20">
                 <h3 className="text-4xl font-black text-white mb-2 tracking-tighter uppercase">Interior Architecture</h3>
                 <p className="text-white/90 font-medium max-w-lg mb-6">Fusing industrial durability with high-end aesthetic precision for commercial spaces.</p>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden mb-6 relative">
-                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="industrial metal turbine component with high precision machining and metallic sheen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTLMtJKSpHfXO_LN2gQ4s32pocGKAJGhLiPa3sAUUuXe3JOgVC3foZD0VmZtIydAxkSZYf-xfuvK-1Td0J7DDS1Bj_6m15qKV_Yhe9okAjVyEhp8ffJRKpSizNGjIm7plZ_7Z3J3koW6UvxvD1okVGYa0Lr6Te9svzZvMiwSZ2gzH70V8KNax_xttkO_j5faATqfXAUsJODCko7JX17Hb35f4KH7rqOOTtV92kcqh80OxfOnUlvQfhdl8mvSaEx30UQ_r4zxzFThfY"/>
+                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/assets/services/img44.jpg"/>
                 <div className="absolute top-4 right-4">
                   <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">In Stock</span>
                 </div>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
 
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden mb-6 relative">
-                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="modern electrical circuit breaker panel with clean wiring and technical switches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNxd1lm8ZGnM4ygW41XmAPrr7QfbUwy7mdh9CTGp7-8I1BT4GAPhi9Yz-ft-HG2PlvX_MAxfOrqH9lz2bAB21uSg5f2fDhicLwgKpApQ8G831KULGXZIbllI9NdKZbROPJHcLEUcTeA730gPOOuwIRL6K3MS3EbpYOkN6liBtH7HC44AK8iknEFdvw4K9V09V_Mdnt3KCXr0TTqzHExyhfNZLs1JPc4tFMdI2We8Wm8Ue1YpxGXd2Mr9PcHbWvL9CdhTjx_9j7nSP"/>
+                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/assets/services/img48.jpg"/>
               </div>
               <div className="flex justify-between items-start">
                 <div>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden mb-6 relative">
-                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="architectural concrete finish samples showing different textures and shades of gray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDYKf1j-SOTAvvh2esJkTtEGWVxrtZJXWeE-bySeVK8efMJyip42-POrBS8bdb27lKp3ZPm6rrjvy50LZBq9l6xlnDYg6wDxKrRh2nJ7y0YX0fmqaNIzakPSDW_iGxe3qiV_rZV31ctW5hP-HcuIBiBzmFMasDkgkPLjqGMUI6ls9sfgSZUCe6AHOrswZwl7GQQ9Gyj-QNA9c0xFQH7-F0r0H3nI1q3fJsM7FWxKb8GJyRZ-DYNavz2Rqg8W5SQZJ-7COgNzzimBGg"/>
+                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/assets/services/img50.jpg"/>
               </div>
               <div className="flex justify-between items-start">
                 <div>
@@ -129,7 +129,7 @@ export default function ServicesPage() {
 
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden mb-6 relative">
-                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="professional plumbing copper pipe manifold with precision joints and valves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAd4MRHoydDwrvW-wdVl3VAvVpB8hYk77krVMcY1fr-IfYWMDWjDqnrcnF05BvsK7Vtt01-3XEz--4QS7L8m6bJ7_6CXv3TElrMasvSeWEiWTVYmwVHLw6KV31vwahx8tTF3Tc2crT6ZNHsP13L8BSIY8VqnepGFNjYm2b_d7-JHSwYExjTGSPAec3W1X1yVz_6MObdNV2MZeuXs5ZQOLUkX7FQLu2yHCapK9Lcr3Cfw_EIGe8xuq6nX7iJq9BOp8bl8s-YiZTaaru"/>
+                <img alt="Product" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/assets/services/img57.jpg"/>
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
               </div>
               <div className="flex justify-between items-start">
@@ -168,7 +168,7 @@ export default function ServicesPage() {
 
         <section className="relative rounded-2xl overflow-hidden bg-primary-container p-1 md:p-2">
           <div className="absolute inset-0">
-            <img alt="Consultation" className="w-full h-full object-cover opacity-30" data-alt="modern architectural team meeting in a high-tech conference room with blue lighting and large blueprints" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3uhEJ_lYkl3d-21ipjQkgxRASYd4FtI6UZZ8PuRE84He1PZ31TorxSK9h4bzxU8wmqbaKghuPo5HRrt6TcBCqjjd0S3OOQv6shc65Oc7nven9LGxhJLywV1hQJHXwfsupoZ_W7EwQfasvrry8gfBeRL02KdJ4Xa8kpYdvi3366GqpqFoRGkMdlBu2HAScws63F-1ziOygJKq15qdxSJf39aCa-28SwPr8qimZ3QC8pceRWrM5HfZdDl3ED44rQ5rPILtzXllW1ymw"/>
+            <img alt="Consultation" className="w-full h-full object-cover opacity-30" src="/assets/portofolio/img161.jpg"/>
           </div>
           <div className="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-xl p-12 md:p-24 flex flex-col items-center text-center">
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-tight">Ready to Engineer<br/>Your Vision?</h2>
