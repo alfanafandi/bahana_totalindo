@@ -14,7 +14,7 @@ export default function Home() {
             <img 
               alt="Industrial Construction" 
               className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTR20BILKY03Vwn1Q6P1Eru-D-jWJqVV3LwgnPQWQVjQuIg8jOEh5YnA2Hbl3qN4IyvWJIxUETlaF2wt3S-gdbJd7mf9imCf0NZeqDHLFlLU17aGJVRDhfmgJ75iD7PXSuBlvniVifnod-lwNmWtf4KrLdEBPTROM8QddL1hCai3WEVjgmZT1Iu_1HN88FLQCfTyw7WmZEJWUkjQ5UrtMT5JUl5j6iiU1Bcrzm6wDtLVbDhK6C7z-cLQjmH4-z0O5Qpw__rYEdyB7R"
+              src="/assets/about/img104.jpg"
             />
             <div className="absolute inset-0 hero-gradient"></div>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
                 <img 
                   alt="Engineering Precision" 
                   className="w-full h-full object-cover mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbk4IOPzHV9Pp0KDCNYjTqRo5QslWVH_D8o7ZYEQB_Ny2kQf8Orh_itTMS_tdlWNl0J8BYZjdYRm2t21TqVWVXpHk6JTBh1NZFGgNh9JNy2ezR8_snr2-9GH9md6PtWPybHU1RNUww479IzztoPZYZ7q7Pn2pdlJFv7dWNKrqJxRc58rVJFMEa_OmGI7n2oh4gljIenj_DRRQbeivoGcbgLqWoA7hC6eKMCG2anqv_HRwZtEKsUNh2JBNlMYtAMBDRa4soFExgCJnm"
+                  src="/assets/about/img121.jpg"
                 />
               </div>
               <div className="absolute -bottom-12 -right-12 w-2/3 aspect-video bg-primary p-8 rounded-lg shadow-xl hidden md:block">
@@ -119,44 +119,49 @@ export default function Home() {
               <p className="text-on-surface-variant max-w-sm mb-2">Kami menyediakan layanan hulu ke hilir untuk memastikan konsistensi kualitas pada setiap tahap proyek Anda.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-              {/* Service 1: Civil */}
+              {/* Service 1: Architecture */}
               <div className="md:col-span-8 group relative bg-surface-container-lowest rounded-xl overflow-hidden min-h-[400px] flex items-end">
                 <img 
-                  alt="Civil Construction" 
+                  alt="Architecture" 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvYnQyZgevackKt-wE_MNm3IrM5pIP6J695CQgyq4EH0NHp22RruYUF0d46zhvidsfNOZR6qDirm8blInOmC1GTr7xH8bOf4oJUPVMoY-_Tqe5Oo0e-YxoaiTdR39Au8Jk-IxjWV3XeDYq67n4QR5gG5jaJ9fLpJs_RthimzuRyWVQ4BG9evJFTTEpx-SQiSXT5KopS5_gyz823r2zbjg1QOENNQtUKrvseo1hemZGe3sJ9ShMUDyX6JK-TDvgn4gAQLc92zB8txTV"
+                  src="/assets/portofolio/img181.jpg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
                 <div className="relative p-12 w-full">
                   <span className="material-symbols-outlined text-white text-5xl mb-6">foundation</span>
-                  <h3 className="text-3xl font-black text-white mb-4 uppercase">Civil Construction</h3>
-                  <p className="text-white/80 max-w-md">Pembangunan infrastruktur skala besar, gedung perkantoran, dan fasilitas industri dengan fokus pada durabilitas jangka panjang.</p>
+                  <h3 className="text-3xl font-black text-white mb-4 uppercase">Architecture</h3>
+                  <p className="text-white/80 max-w-md">Perancangan struktur dan bangunan sipil dari pondasi berstandar nasional hingga wujud bangunan utuh yang estetik dan kokoh.</p>
                 </div>
               </div>
-              {/* Service 2: MEP */}
+              {/* Service 2: Mekanikal Elektrikal */}
               <div className="md:col-span-4 group relative bg-primary rounded-xl overflow-hidden min-h-[400px] flex items-end">
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                   <img 
                     alt="MEP Engineering" 
                     className="w-full h-full object-cover" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYrPi49TG8GLmeMCONSm9f4iJBksUWYUU0DS_jKgQPXYp29WUjAHr3KxteTppvUbY5HTPxWGFKOhJedYO5ITeEIkNhnlmE4OrII1sIL-HqoYUcHd4Cbfefw2HPhA9KaJxDnWPBkn5z-sYh7TsHs6cR46vjDjDgiYK7HvhhthV1Ja-t2GOW-A1Z3TanNJ73Ayn0GXxQssoPXOfOh7tDxhPczqZWikJb1hmICOp3WHIVSTb57YVQ6vTMoEkP-sNno1Of_bCBXn7rbmLp"
+                    src="/assets/portofolio/img159.jpg"
                   />
                 </div>
                 <div className="relative p-10 w-full">
                   <span className="material-symbols-outlined text-secondary-fixed text-5xl mb-6">electric_bolt</span>
-                  <h3 className="text-2xl font-black text-white mb-4 uppercase">MEP Systems</h3>
-                  <p className="text-white/70 text-sm">Mechanical, Electrical, and Plumbing engineering yang efisien dan aman.</p>
+                  <h3 className="text-2xl font-black text-white mb-4 uppercase">Mekanikal Elektrikal</h3>
+                  <p className="text-white/70 text-sm">Mechanical, Electrical, and Plumbing engineering yang efisien dan aman untuk skala industri maupun komersial.</p>
                 </div>
               </div>
-              {/* Service 3: HVAC */}
+              {/* Service 3: Tata Udara */}
               <div className="md:col-span-4 group relative bg-surface-container-lowest border border-surface-container rounded-xl overflow-hidden min-h-[400px] flex items-end">
-                <div className="p-10 w-full">
-                  <span className="material-symbols-outlined text-primary text-5xl mb-6">ac_unit</span>
-                  <h3 className="text-2xl font-black text-on-surface mb-4 uppercase">HVAC Solutions</h3>
-                  <p className="text-on-surface-variant text-sm">Sistem sirkulasi udara dan kontrol suhu presisi untuk kenyamanan optimal dalam gedung.</p>
-                  <div className="mt-8 pt-8 border-t border-surface-container flex items-center justify-between group">
-                    <span className="text-xs font-bold uppercase tracking-widest text-primary">Details</span>
-                    <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                 <img 
+                    alt="HVAC" 
+                    className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110" 
+                    src="/assets/services/img46.jpg"
+                  />
+                <div className="p-10 w-full relative z-10 bg-gradient-to-t from-black/80 to-transparent">
+                  <span className="material-symbols-outlined text-white text-5xl mb-6">ac_unit</span>
+                  <h3 className="text-2xl font-black text-white mb-4 uppercase">Tata Udara (HVAC)</h3>
+                  <p className="text-white/80 text-sm">Sistem sirkulasi udara dan kontrol suhu presisi untuk kenyamanan optimal dalam gedung dan fasilitas pabrik.</p>
+                  <div className="mt-8 pt-8 border-t border-white/20 flex items-center justify-between group">
+                    <span className="text-xs font-bold uppercase tracking-widest text-white">Details</span>
+                    <span className="material-symbols-outlined text-white group-hover:translate-x-2 transition-transform">arrow_forward</span>
                   </div>
                 </div>
               </div>
@@ -165,16 +170,48 @@ export default function Home() {
                 <img 
                   alt="Interior Design" 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJbiZm60fJIzaCF1SrmZdSY1EwGJgy5TiwIbQPUaoVCAe9_GJZE9VldieMawtmyEwMZIAlVW9S5tTDzw4G_KtJCnDm9MoQGkawYEOc3f7X67W1ryDUnp-cFQHvYJWpEqEnaUr_KDlLijqHmmTBTgYZor4KJOA1aaRTl1LnTmcFjrZXRI3O20SFM4A2MmFBAd5q2EMxvkg9dDcbNFrAet9lsBBs9wouJX3pFV46-KMP31LoXX1iWDAf_rInSXUbeHMsqTP24_9duv6I"
+                  src="/assets/portofolio/img232.jpg"
                 />
                 <div className="absolute inset-0 bg-white/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="relative p-12 w-full bg-surface-container-lowest/80 backdrop-blur-md md:max-w-md m-6 rounded-lg">
                   <span className="material-symbols-outlined text-primary text-4xl mb-4">format_paint</span>
-                  <h3 className="text-2xl font-black text-on-surface mb-2 uppercase">Interior Design</h3>
-                  <p className="text-on-surface-variant text-sm">Transformasi ruang interior yang menggabungkan estetika modern dengan fungsionalitas ruang kerja.</p>
+                  <h3 className="text-2xl font-black text-on-surface mb-2 uppercase">Interior</h3>
+                  <p className="text-on-surface-variant text-sm">Transformasi ruang dengan detail interior yang rapi, menggabungkan estetika modern dan material premium terbaik.</p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Clients Section */}
+        <section className="py-24 bg-white border-y border-slate-100 overflow-hidden" id="clients">
+          <div className="container mx-auto px-8 mb-12 text-center">
+             <span className="text-primary font-black uppercase tracking-[0.3em] text-xs">Mitra Strategis</span>
+             <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-on-surface mt-4">Client Kami.</h2>
+          </div>
+          
+          {/* Infinite Marquee */}
+          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll whitespace-nowrap py-4">
+              {['RSCM', 'RSIA Bunda', 'RS Brawijaya', 'Klinik Westerindo', 'RS Izza', 'SamMarie', 'RSIA YPK Mandiri', 'Morula IVF', 'RS Bethsaida', 'RS Mentari', 'RS Sentosa', 'RS PHC', 'RSAL', 'Primaya Hospital', 'RS Ciputra', 'RSKIA Sadewa', 'RSUD Pasar Minggu', 'RS Marinir Cilandak', 'Lantamal AL', 'PT Indofood', 'PT Sinar Sosro', 'PT Capsugel', 'PT Novel Pharmaceutical', 'PT Fonusa Agung Mulia', 'PT Bengawan Sinergy'].map((client, i) => (
+                <li key={i} className="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200">
+                    <span className="material-symbols-outlined text-slate-400">domain</span>
+                  </div>
+                  <span className="text-xl font-bold font-inter text-slate-800 tracking-tight">{client}</span>
+                </li>
+              ))}
+            </ul>
+             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll whitespace-nowrap py-4" aria-hidden="true">
+              {['RSCM', 'RSIA Bunda', 'RS Brawijaya', 'Klinik Westerindo', 'RS Izza', 'SamMarie', 'RSIA YPK Mandiri', 'Morula IVF', 'RS Bethsaida', 'RS Mentari', 'RS Sentosa', 'RS PHC', 'RSAL', 'Primaya Hospital', 'RS Ciputra', 'RSKIA Sadewa', 'RSUD Pasar Minggu', 'RS Marinir Cilandak', 'Lantamal AL', 'PT Indofood', 'PT Sinar Sosro', 'PT Capsugel', 'PT Novel Pharmaceutical', 'PT Fonusa Agung Mulia', 'PT Bengawan Sinergy'].map((client, i) => (
+                <li key={i + 100} className="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200">
+                    <span className="material-symbols-outlined text-slate-400">domain</span>
+                  </div>
+                  <span className="text-xl font-bold font-inter text-slate-800 tracking-tight">{client}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

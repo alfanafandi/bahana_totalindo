@@ -8,8 +8,8 @@ export default function AboutPage() {
       <main className="min-h-screen">
         {/* Hero Section: The Architectural Monolith */}
         <section className="relative h-[707px] flex items-center overflow-hidden bg-primary">
-          <div className="absolute inset-0 z-0">
-            <img alt="Industrial Construction Site" className="w-full h-full object-cover opacity-40 grayscale" data-alt="dramatic wide angle shot of high-rise steel skyscraper framework under construction with clear blue sky and strong geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1o9tfjU75DR-O83VIINAv_avaFLuCvjNq3KZyMIEuW2oUzOB-hogypO7JKfE9_EPCA_MgUr_B75aTLgNGnR3i3d2yeyyAyV-62-fvuFgSzecZ1VtqRDqSbm8WijN6bHHjYM9le3OzFVmslqyXidLRFSUU8it1t_HCp88kNEHtYJfKe-UL5ebKBy0_KnT9OBKJ7isTWNtZ-V9hVGYwrTSjxTahkeuGw5BcxZaINDxX2JBQMYLAK7a0nquDfrfh4gojv4yWqNlFJjyw"/>
+          <div className="absolute inset-0 z-0 bg-primary">
+            <img alt="Industrial Construction Site" className="w-full h-full object-cover opacity-30 grayscale mix-blend-multiply" src="/assets/about/img106.jpg"/>
           </div>
           <div className="container mx-auto px-8 relative z-10">
             <div className="max-w-4xl space-y-6">
@@ -74,22 +74,27 @@ export default function AboutPage() {
 
         {/* Mission & Vision: Glassmorphism Modules */}
         <section className="py-32 relative overflow-hidden bg-white">
+          <div className="absolute inset-0 opacity-20">
+            <img src="/assets/about/img97.jpg" alt="Visi Misi Background" className="w-full h-full object-cover grayscale" />
+          </div>
           <div className="absolute top-0 right-0 w-1/2 h-full bg-surface-container-low -skew-x-12 translate-x-24"></div>
           <div className="container mx-auto px-8 relative z-10 grid md:grid-cols-2 gap-16">
             <div className="space-y-6">
-              <h3 className="text-6xl font-black text-surface-container-highest tracking-tighter select-none">MISSION</h3>
-              <div className="p-10 bg-white/60 backdrop-blur-xl shadow-2xl rounded-xl border border-white/20">
-                <p className="text-lg font-medium text-on-surface leading-relaxed">
-                  To redefine the industrial skyline of Indonesia by integrating sustainable engineering practices with uncompromising material quality and structural safety.
+              <h3 className="text-6xl font-black text-surface-container-highest tracking-tighter select-none">VISI</h3>
+              <div className="p-10 bg-primary/95 text-white shadow-2xl rounded-xl border border-white/20">
+                <p className="text-lg font-medium leading-relaxed">
+                  Menjadi perusahaan konstruksi dan engineering berskala nasional yang terpercaya, profesional, dan inovatif dalam memberikan solusi terbaik untuk setiap proyek skala industri maupun komersial.
                 </p>
               </div>
             </div>
             <div className="space-y-6 md:mt-24">
-              <h3 className="text-6xl font-black text-surface-container-highest tracking-tighter text-right select-none">VISION</h3>
-              <div className="p-10 bg-primary/95 text-white shadow-2xl rounded-xl">
-                <p className="text-lg font-medium leading-relaxed">
-                  To become the paramount choice for complex civil engineering and mechanical fabrication, known for our technical audacity and industrial integrity.
-                </p>
+              <h3 className="text-6xl font-black text-surface-container-highest tracking-tighter text-right select-none">MISI</h3>
+              <div className="p-10 bg-white/80 backdrop-blur-xl shadow-2xl rounded-xl border border-white/20">
+                <ul className="text-lg font-medium text-on-surface leading-relaxed list-disc list-inside space-y-3">
+                  <li>Memberikan kualitas kerja standar nasional yang presisi dan aman.</li>
+                  <li>Membangun kemitraan jangka panjang berbasis kepercayaan dengan seluruh klien.</li>
+                  <li>Mengembangkan SDM engineering yang ahli dan adaptif terhadap teknologi terbaru.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -139,8 +144,8 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <section className="py-24 px-8 bg-[#00236f] text-white overflow-hidden relative">
-          <div className="absolute inset-0 opacity-10">
-            <img alt="Engineering Workshop" className="w-full h-full object-cover" data-alt="industrial workshop interior with steel beams, welding sparks in distant background, high-contrast cool lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyr4UlpIa5SNwmKERuBcsgbMWrqu1Zz-FLjq-Ym-Llv3Svbk7_2es96_55NPeOpmSNAtoL8vezi03gsyp3h-lrsyZ6RehpHz9FyCc897XUuMzz_-SCAn1mMwa1JaBTlTY_B2VyPEhvZpaSaO2v6B9mDbNCjCcgJ5RfJMdtKXpUxtcKIt34wrN-_Mp8JyHIK0FjQjr0vtqGSdnUgeFVLCZ8tP4DfmWGjHIi7GNJbInY87BrlwOSe_aMhs2ESa0hB6vD2EQUrPhOiJyR"/>
+          <div className="absolute inset-0 opacity-20">
+            <img alt="Engineering Workshop" className="w-full h-full object-cover mix-blend-luminosity" src="/assets/about/img111.jpg"/>
           </div>
           <div className="container mx-auto relative z-10 text-center space-y-8">
             <h3 className="text-4xl md:text-6xl font-bold tracking-tighter">READY TO BUILD THE IMPOSSIBLE?</h3>
