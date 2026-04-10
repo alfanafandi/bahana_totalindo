@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "PT. Bahana Totalindo Teknik - Engineering Excellence",
   description: "General Contractor specializing in Civil Construction, MEP, HVAC, and Interior Design with uncompromising precision",
+  icons: {
+    icon: "/assets/services/img21.jpg",
+    apple: "/assets/services/img21.jpg",
+  },
 };
 
 export default function RootLayout({
