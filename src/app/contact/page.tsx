@@ -9,7 +9,7 @@ export default function ContactPage() {
       <main className="min-h-screen">
         {/* Hero Section / Context Header */}
         <section className="bg-primary-container text-white py-24 px-8 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" data-alt="close up of industrial architectural blueprints with professional engineering tools and drafting compass on a clean desk"></div>
+          <div className="absolute inset-0 opacity-20 bg-[url('/assets/portofolio/img336.jpg')] bg-cover bg-top" data-alt="close up of industrial architectural blueprints with professional engineering tools and drafting compass on a clean desk"></div>
           <div className="relative z-10 max-w-6xl mx-auto">
             <p className="uppercase tracking-widest text-on-primary-container font-bold text-sm mb-4">Inquiry &amp; Consultation</p>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-6">Build the Future <br/>With Precision.</h2>
@@ -63,54 +63,101 @@ export default function ContactPage() {
             {/* Contact Sidebar */}
             <div className="lg:col-span-5 bg-surface-container p-8 md:p-16 flex flex-col justify-between">
               <div>
-                <h3 className="text-3xl font-bold text-primary mb-8 tracking-tight">Global HQ</h3>
-                <div className="space-y-10">
+                <h3 className="text-3xl font-bold text-primary mb-8 tracking-tight">Kantor & Workshop</h3>
+                <div className="space-y-8">
                   {/* Address Block */}
                   <div className="flex gap-4">
                     <div className="bg-primary-container p-3 h-fit rounded">
-                      <span className="material-symbols-outlined text-white" data-icon="location_on">location_on</span>
+                      <span className="material-symbols-outlined text-white">location_on</span>
                     </div>
                     <div>
-                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Physical Address</p>
+                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Kantor & Workshop</p>
                       <p className="text-on-surface font-medium leading-relaxed">
-                        Grand Galaxy City, Rukan RSA 3 No. 55,<br/>
-                        Jaka Setia, Bekasi Selatan,<br/>
-                        Kota Bekasi, Jawa Barat 17147
+                        Harapan Indah, Ruko Symphony Blok HX No.15,<br/>
+                        Jl. Symphony Pusaka Rakyat,<br/>
+                        Kecamatan Tarumajaya, Bekasi, Jawa Barat.
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Phone Block */}
                   <div className="flex gap-4">
                     <div className="bg-secondary-container p-3 h-fit rounded">
-                      <span className="material-symbols-outlined text-on-secondary-fixed-variant" data-icon="call">call</span>
+                      <span className="material-symbols-outlined text-on-secondary-fixed-variant">call</span>
                     </div>
                     <div>
-                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Technical Support</p>
-                      <p className="text-on-surface font-bold text-xl">+62 21 8243 0000</p>
-                      <p className="text-secondary text-sm">Mon - Fri, 08:00 - 17:00 WIB</p>
+                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Telepon</p>
+                      <a href="tel:02189442250" className="text-on-surface font-bold text-xl hover:text-primary transition-colors">021 - 89442250</a>
                     </div>
                   </div>
-                  
+
                   {/* WhatsApp Block */}
                   <div className="flex gap-4">
                     <div className="bg-[#25D366] p-3 h-fit rounded">
-                      <span className="material-symbols-outlined text-white" data-icon="chat">chat</span>
+                      <span className="material-symbols-outlined text-white">chat</span>
                     </div>
                     <div>
-                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Direct Messaging</p>
-                      <Link className="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#075E54] font-bold py-2 px-4 rounded-full hover:bg-[#25D366]/20 transition-colors" href="#">
-                        Chat with Engineering via WhatsApp
-                      </Link>
+                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">WhatsApp</p>
+                      <a
+                        href="https://wa.me/6281282404353"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#075E54] font-bold py-2 px-4 rounded-full hover:bg-[#25D366]/20 transition-colors"
+                      >
+                        0812 82 404 353
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Email Block */}
+                  <div className="flex gap-4">
+                    <div className="bg-primary p-3 h-fit rounded">
+                      <span className="material-symbols-outlined text-white">mail</span>
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Email</p>
+                      <a href="mailto:bahana.tteknik@gmail.com" className="text-on-surface font-bold hover:text-primary transition-colors">
+                        bahana.tteknik@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Social Media Block */}
+                  <div className="flex gap-4">
+                    <div className="bg-[#1877F2] p-3 h-fit rounded">
+                      <span className="material-symbols-outlined text-white">public</span>
+                    </div>
+                    <div>
+                      <p className="text-[0.75rem] font-black uppercase text-secondary tracking-widest mb-1">Media Sosial</p>
+                      <div className="flex flex-col gap-2 mt-1">
+                        <a
+                          href="https://facebook.com/PT.BahanaTotalindoTeknik"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#1877F2] font-bold text-sm hover:underline"
+                        >
+                          <span className="material-symbols-outlined text-[16px]">thumb_up</span>
+                          PT. BAHANA TOTALINDO TEKNIK
+                        </a>
+                        <a
+                          href="https://instagram.com/bahana.totalindo.teknik"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#E1306C] font-bold text-sm hover:underline"
+                        >
+                          <span className="material-symbols-outlined text-[16px]">photo_camera</span>
+                          bahana.totalindo.teknik
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               {/* Project Stat Block Component */}
               <div className="mt-12 bg-secondary-container p-6 rounded-xl border-l-4 border-primary">
-                <span className="text-display-sm text-primary font-black text-4xl block">12+</span>
-                <span className="text-label-sm uppercase font-bold text-on-secondary-fixed-variant tracking-widest">Years of Industrial Integrity</span>
+                <span className="text-display-sm text-primary font-black text-4xl block">15+</span>
+                <span className="text-label-sm uppercase font-bold text-on-secondary-fixed-variant tracking-widest">Tahun Pengalaman Industri</span>
               </div>
             </div>
           </div>
@@ -120,31 +167,30 @@ export default function ContactPage() {
         <section className="bg-surface-container-low py-20 px-8">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/3 order-2 md:order-1">
-              <h4 className="text-4xl font-bold tracking-tighter text-primary mb-6">Strategic Presence in the Hub.</h4>
+              <h4 className="text-4xl font-bold tracking-tighter text-primary mb-6">Lokasi Strategis di Pusat Industri.</h4>
               <p className="text-secondary leading-relaxed mb-8">
-                Located in the heart of Indonesia's industrial corridor, our headquarters allows us to rapidly mobilize technical teams to major sites in Jakarta, Bekasi, and Cikarang.
+                Terletak di jantung koridor industri Indonesia, kantor pusat kami memungkinkan mobilisasi tim teknis secara cepat ke berbagai situs proyek utama di Jakarta, Bekasi, maupun Cikarang.
               </p>
               <div className="bg-white p-6 shadow-md inline-block border-l-4 border-on-tertiary-container">
-                <p className="font-bold text-primary">Regional Operations</p>
+                <p className="font-bold text-primary">Jangkauan Operasional</p>
                 <ul className="text-sm text-secondary mt-2 space-y-1">
-                  <li>• Jabodetabek Region</li>
-                  <li>• West Java Industrial Cluster</li>
-                  <li>• National Infrastructure Projects</li>
+                  <li>• Wilayah Jabodetabek</li>
+                  <li>• Kawasan Industri Jawa Barat</li>
+                  <li>• Proyek Infrastruktur Nasional</li>
                 </ul>
               </div>
             </div>
             
-            <div className="w-full md:w-2/3 order-1 md:order-2 h-[450px] bg-slate-300 rounded-lg shadow-inner overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
-              {/* Placeholder for Map */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center" data-alt="clean top-down simplified map of Jakarta and Bekasi metropolitan area with blue technical accents" data-location="Bekasi, Indonesia"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-primary/40 rounded-full animate-ping absolute"></div>
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center relative z-10 border-2 border-white shadow-xl">
-                    <span className="material-symbols-outlined text-white" data-icon="apartment">apartment</span>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full md:w-2/3 order-1 md:order-2 h-[450px] bg-slate-300 rounded-lg shadow-inner overflow-hidden relative transition-all duration-700">
+              <iframe 
+                src="https://maps.google.com/maps?q=Ruko%20Symphony%20Blok%20HX%20No.15%20Harapan%20Indah%20Bekasi&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
           </div>
         </section>

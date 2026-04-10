@@ -65,7 +65,7 @@ export default function PortfolioPage() {
             {images.map((img, idx) => (
               <div key={idx} className="group relative overflow-hidden bg-surface-container-low rounded-md break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300">
                 <img 
-                  className="w-full h-auto object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" 
+                  className="w-full h-auto object-cover transition-all duration-700 group-hover:scale-105 group-hover:shadow-lg" 
                   src={`/assets/portofolio/${img}`}
                   alt={`Portfolio ${idx}`}
                   loading="lazy"
