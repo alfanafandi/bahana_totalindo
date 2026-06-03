@@ -68,7 +68,6 @@ export default function AdminLoginPage() {
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">
                 Sandi Akses
               </label>
-              <span className="text-[9px] text-slate-400 font-medium">Default: admin123</span>
             </div>
             <div className="relative">
               <input
