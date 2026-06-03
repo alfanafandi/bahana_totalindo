@@ -88,6 +88,9 @@ function readLocalDb(): DatabaseSchema {
 
 // Write local JSON file safely
 function writeLocalDb(data: DatabaseSchema): void {
+  if (process.env.VERCEL) {
+    throw new Error("Cannot write to local filesystem on Vercel. Please ensure Vercel KV is connected.");
+  }
   try {
     const dir = path.dirname(LOCAL_DB_PATH);
     if (!fs.existsSync(dir)) {
@@ -167,10 +170,16 @@ export async function saveDb(data: DatabaseSchema): Promise<void> {
     try {
       await kv.set(KV_KEY, data);
     } catch (error) {
-      console.error("Vercel KV set error, saving to local file instead:", error);
+      console.error("Vercel KV set error:", error);
+      if (process.env.VERCEL) {
+        throw new Error("Gagal menyimpan data ke Vercel KV. Silakan periksa log integrasi Vercel Anda.");
+      }
       writeLocalDb(data);
     }
   } else {
+    if (process.env.VERCEL) {
+      throw new Error("Vercel KV tidak terdeteksi. Silakan hubungkan Vercel KV di tab Storage pada Vercel Dashboard dan lakukan redeploy.");
+    }
     writeLocalDb(data);
   }
 }
