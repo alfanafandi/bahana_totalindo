@@ -9,7 +9,7 @@ async function hashSHA256(text: string): Promise<string> {
   return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
   // Protect all paths starting with /admin, except /admin/login
@@ -31,7 +31,7 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// Apply middleware only to /admin routes
+// Apply proxy only to /admin routes
 export const config = {
   matcher: ["/admin/:path*"],
 };
