@@ -89,6 +89,18 @@ export default function AdminDashboardPage() {
   // Equipment input state
   const [newEquip, setNewEquip] = useState("");
 
+  // Portfolio Smart Layout States
+  const [portfolioSearch, setPortfolioSearch] = useState("");
+  const [portfolioFilterCategory, setPortfolioFilterCategory] = useState("all");
+  const [portfolioPage, setPortfolioPage] = useState(1);
+  const [portfolioViewMode, setPortfolioViewMode] = useState<"grid" | "table">("grid");
+  const portfolioPerPage = 12;
+
+  // Reset pagination to page 1 on search or filter change
+  useEffect(() => {
+    setPortfolioPage(1);
+  }, [portfolioSearch, portfolioFilterCategory]);
+
   // Toast Helper
   const showToast = (message: string, type: "success" | "error" = "success") => {
     setToast({ show: true, message, type });
@@ -451,6 +463,21 @@ export default function AdminDashboardPage() {
   const handleStatChange = (id: string, value: string) => {
     setStats(prev => prev.map(item => item.id === id ? { ...item, value } : item));
   };
+
+  // Filter and paginate portfolio data
+  const filteredPortfolio = portfolio.filter(item => {
+    const matchesSearch = !portfolioSearch || item.title.toLowerCase().includes(portfolioSearch.toLowerCase());
+    const matchesCategory = portfolioFilterCategory === "all" || item.category === portfolioFilterCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const totalPortfolioPages = Math.max(1, Math.ceil(filteredPortfolio.length / portfolioPerPage));
+  const paginatedPortfolio = paginatedPortfolioHelper(filteredPortfolio, portfolioPage, portfolioPerPage);
+
+  function paginatedPortfolioHelper(list: PortfolioItem[], page: number, perPage: number) {
+    const start = (page - 1) * perPage;
+    return list.slice(start, start + perPage);
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex font-inter">
@@ -972,9 +999,16 @@ export default function AdminDashboardPage() {
               {activeTab === "portfolio" && (
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                   {/* Left Form */}
-                  <div className="lg:col-span-5 bg-white border border-slate-200 p-8 rounded-2xl sticky top-28 shadow-sm">
-                    <h3 className="text-md font-black text-slate-950 uppercase mb-6 tracking-wide">
-                      {activeEditId ? "EDIT PORTOFOLIO" : "TAMBAH PROYEK BARU"}
+                  <div className={`lg:col-span-5 bg-white border p-8 rounded-2xl sticky top-28 shadow-sm transition-all duration-300 ${
+                    activeEditId ? "border-blue-500 ring-2 ring-blue-500/10" : "border-slate-200"
+                  }`}>
+                    <h3 className="text-md font-black text-slate-950 uppercase mb-6 tracking-wide flex items-center justify-between">
+                      <span>{activeEditId ? "EDIT PORTOFOLIO" : "TAMBAH PROYEK BARU"}</span>
+                      {activeEditId && (
+                        <span className="text-[10px] bg-blue-50 text-blue-600 px-2.5 py-1 rounded font-bold uppercase tracking-wider animate-pulse">
+                          Edit Mode
+                        </span>
+                      )}
                     </h3>
                     <form onSubmit={handlePortfolioSubmit} className="space-y-6">
                       <div className="space-y-2">
@@ -1041,7 +1075,7 @@ export default function AdminDashboardPage() {
                           <button 
                             type="button"
                             onClick={() => setPortfolioForm(prev => ({ ...prev, image: "" }))}
-                            className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full p-1"
+                            className="absolute top-2 right-2 bg-red-500 hover:bg-red-650 text-white rounded-full p-1"
                           >
                             <span className="material-symbols-outlined text-xs">close</span>
                           </button>
@@ -1072,45 +1106,249 @@ export default function AdminDashboardPage() {
                     </form>
                   </div>
 
-                  {/* Right List Grid */}
+                  {/* Right List Grid with Smart Layout */}
                   <div className="lg:col-span-7">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 h-[70vh] overflow-y-auto pr-2 scrollbar-thin">
-                      {portfolio.map(item => (
-                        <div key={item.id} className="group relative bg-slate-100 border border-slate-200 rounded-lg overflow-hidden aspect-square flex flex-col justify-end shadow-sm">
-                          <img 
-                            src={item.image.startsWith("/") ? item.image : `/assets/portofolio/${item.image}`} 
-                            alt={item.title} 
-                            className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
+                    {/* Control Panel */}
+                    <div className="flex flex-col md:flex-row gap-4 mb-6 items-center justify-between bg-white border border-slate-200 p-4 rounded-2xl shadow-sm">
+                      {/* Search and Filter */}
+                      <div className="flex flex-1 flex-col sm:flex-row gap-2 w-full">
+                        <div className="relative flex-1">
+                          <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                          <input
+                            type="text"
+                            placeholder="Cari nama proyek..."
+                            value={portfolioSearch}
+                            onChange={(e) => setPortfolioSearch(e.target.value)}
+                            className="w-full bg-white border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg pl-9 pr-4 py-2 text-xs text-slate-800 outline-none transition-all"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex flex-col justify-end p-4">
-                            <span className="text-[8px] font-bold bg-blue-600 px-2 py-0.5 rounded text-white w-max uppercase tracking-wider">{item.category}</span>
-                            <h5 className="text-white text-xs font-bold leading-tight mt-1 line-clamp-1">{item.title}</h5>
-                            <span className="text-[8px] text-slate-350 font-semibold tracking-widest uppercase mt-0.5">Status: {item.status}</span>
-                            
-                            {/* Action Buttons overlay */}
-                            <div className="flex gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <select
+                          value={portfolioFilterCategory}
+                          onChange={(e) => setPortfolioFilterCategory(e.target.value)}
+                          className="bg-white border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-3 py-2 text-xs text-slate-705 outline-none transition-all cursor-pointer"
+                        >
+                          <option value="all">Semua Kategori</option>
+                          <option value="Civil">Civil Construction</option>
+                          <option value="MEP">MEP Engineering</option>
+                          <option value="HVAC">HVAC Solutions</option>
+                          <option value="Interior">Interior Design</option>
+                        </select>
+                      </div>
+
+                      {/* View Mode Toggle and Count */}
+                      <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end border-t md:border-t-0 pt-3 md:pt-0 border-slate-100">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase whitespace-nowrap">
+                          {filteredPortfolio.length} Proyek
+                        </span>
+                        <div className="flex border border-slate-200 rounded-lg overflow-hidden bg-white">
+                          <button
+                            onClick={() => setPortfolioViewMode("grid")}
+                            className={`p-2 flex items-center justify-center transition-colors ${
+                              portfolioViewMode === "grid" 
+                                ? "bg-blue-600 text-white" 
+                                : "text-slate-400 hover:text-slate-700 hover:bg-slate-50"
+                            }`}
+                            title="Grid View"
+                          >
+                            <span className="material-symbols-outlined text-sm">grid_view</span>
+                          </button>
+                          <button
+                            onClick={() => setPortfolioViewMode("table")}
+                            className={`p-2 flex items-center justify-center transition-colors ${
+                              portfolioViewMode === "table" 
+                                
+                                ? "bg-blue-600 text-white" 
+                                : "text-slate-400 hover:text-slate-700 hover:bg-slate-50"
+                            }`}
+                            title="Table View"
+                          >
+                            <span className="material-symbols-outlined text-sm">table_rows</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Data Display */}
+                    {paginatedPortfolio.length === 0 ? (
+                      <div className="bg-white border border-slate-200 rounded-2xl p-12 text-center shadow-sm">
+                        <span className="material-symbols-outlined text-slate-300 text-4xl mb-2">search_off</span>
+                        <p className="text-slate-450 text-xs font-bold uppercase tracking-wider">Tidak ada data portofolio ditemukan</p>
+                        <p className="text-slate-400 text-xs mt-1">Coba sesuaikan kata kunci pencarian atau kategori filter Anda.</p>
+                      </div>
+                    ) : portfolioViewMode === "grid" ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {paginatedPortfolio.map(item => (
+                          <div 
+                            key={item.id} 
+                            className={`bg-white border rounded-xl overflow-hidden shadow-sm flex flex-col justify-between transition-all duration-200 ${
+                              activeEditId === item.id 
+                                ? "border-blue-500 ring-2 ring-blue-500/20" 
+                                : "border-slate-200 hover:shadow-md hover:border-slate-300"
+                            }`}
+                          >
+                            <div>
+                              <div className="h-32 bg-slate-50 relative overflow-hidden">
+                                <img 
+                                  src={item.image.startsWith("/") ? item.image : `/assets/portofolio/${item.image}`} 
+                                  alt={item.title} 
+                                  className="w-full h-full object-cover" 
+                                />
+                                <span className="absolute top-2 left-2 text-[8px] font-bold bg-blue-600 text-white px-2 py-0.5 rounded uppercase tracking-wider">
+                                  {item.category}
+                                </span>
+                              </div>
+                              <div className="p-3.5">
+                                <h5 className="text-slate-800 text-xs font-bold leading-snug line-clamp-2 uppercase" title={item.title}>
+                                  {item.title}
+                                </h5>
+                                <span className="text-[9px] text-slate-400 font-semibold tracking-wider uppercase block mt-1">
+                                  Status: {item.status}
+                                </span>
+                              </div>
+                            </div>
+                            <div className="px-3.5 pb-3.5 pt-2 border-t border-slate-100 flex gap-2">
                               <button
                                 onClick={() => handleEditPortfolio(item)}
-                                className="flex-1 py-1 px-2 bg-slate-905 hover:bg-blue-600 text-white text-[9px] font-bold uppercase rounded border border-slate-800 hover:border-blue-500/50 flex items-center justify-center gap-1 transition-colors"
+                                className={`flex-1 py-1.5 px-2 text-[9px] font-bold uppercase rounded border transition-all flex items-center justify-center gap-1 ${
+                                  activeEditId === item.id
+                                    ? "bg-blue-600 border-blue-600 text-white"
+                                    : "bg-slate-50 hover:bg-blue-50 border-slate-200 hover:border-blue-200 text-slate-600 hover:text-blue-600"
+                                }`}
                               >
-                                <span className="material-symbols-outlined text-[10px]">edit</span>
-                                <span>Edit</span>
+                                <span className="material-symbols-outlined text-[10px]">{activeEditId === item.id ? "check" : "edit"}</span>
+                                <span>{activeEditId === item.id ? "Mengedit" : "Edit"}</span>
                               </button>
                               <button
                                 onClick={() => handleDeletePortfolio(item.id)}
-                                className="flex-1 py-1 px-2 bg-slate-905 hover:bg-red-600 text-white text-[9px] font-bold uppercase rounded border border-slate-800 hover:border-red-500/50 flex items-center justify-center gap-1 transition-colors"
+                                className="py-1.5 px-2 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-200 text-slate-500 hover:text-red-600 rounded transition-all flex items-center justify-center"
+                                title="Hapus Proyek"
                               >
                                 <span className="material-symbols-outlined text-[10px]">delete</span>
-                                <span>Hapus</span>
                               </button>
                             </div>
                           </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className="bg-slate-50 border-b border-slate-200 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                                <th className="p-4 w-16 text-center">Foto</th>
+                                <th className="p-4">Nama Proyek</th>
+                                <th className="p-4">Kategori</th>
+                                <th className="p-4">Status</th>
+                                <th className="p-4 text-right">Aksi</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100 text-xs">
+                              {paginatedPortfolio.map(item => (
+                                <tr 
+                                  key={item.id} 
+                                  className={`hover:bg-slate-50/50 transition-colors ${
+                                    activeEditId === item.id ? "bg-blue-50/40" : ""
+                                  }`}
+                                >
+                                  <td className="p-4">
+                                    <div className="w-12 h-12 rounded overflow-hidden bg-slate-100 border border-slate-200 mx-auto">
+                                      <img 
+                                        src={item.image.startsWith("/") ? item.image : `/assets/portofolio/${item.image}`} 
+                                        alt={item.title} 
+                                        className="w-full h-full object-cover" 
+                                      />
+                                    </div>
+                                  </td>
+                                  <td className="p-4 font-bold text-slate-800 uppercase">{item.title}</td>
+                                  <td className="p-4">
+                                    <span className="text-[9px] font-bold bg-slate-100 border border-slate-200 px-2 py-0.5 rounded uppercase tracking-wider text-slate-600">
+                                      {item.category}
+                                    </span>
+                                  </td>
+                                  <td className="p-4 font-semibold text-slate-500 uppercase">{item.status}</td>
+                                  <td className="p-4 text-right">
+                                    <div className="flex gap-2 justify-end">
+                                      <button
+                                        onClick={() => handleEditPortfolio(item)}
+                                        className={`p-1.5 border rounded transition-all flex items-center justify-center ${
+                                          activeEditId === item.id
+                                            ? "bg-blue-600 border-blue-600 text-white"
+                                            : "bg-slate-50 hover:bg-blue-50 border-slate-200 hover:border-blue-200 text-slate-500 hover:text-blue-600"
+                                        }`}
+                                        title="Edit Proyek"
+                                      >
+                                        <span className="material-symbols-outlined text-[12px]">{activeEditId === item.id ? "check" : "edit"}</span>
+                                      </button>
+                                      <button
+                                        onClick={() => handleDeletePortfolio(item.id)}
+                                        className="p-1.5 bg-slate-50 hover:bg-red-50 border border-slate-200 hover:border-red-200 text-slate-500 hover:text-red-650 rounded transition-all flex items-center justify-center"
+                                        title="Hapus Proyek"
+                                      >
+                                        <span className="material-symbols-outlined text-[12px]">delete</span>
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
                         </div>
-                      ))}
-                      {portfolio.length === 0 && (
-                        <p className="text-center text-slate-400 py-16 text-sm col-span-3 w-full">Belum ada data portofolio.</p>
-                      )}
-                    </div>
+                      </div>
+                    )}
+
+                    {/* Pagination Controls */}
+                    {totalPortfolioPages > 1 && (
+                      <div className="flex flex-col sm:flex-row items-center justify-between border-t border-slate-200 pt-6 mt-8 gap-4">
+                        <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                          Halaman {portfolioPage} dari {totalPortfolioPages}
+                        </span>
+                        <div className="flex flex-wrap gap-1">
+                          <button
+                            onClick={() => setPortfolioPage(p => Math.max(1, p - 1))}
+                            disabled={portfolioPage === 1}
+                            className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors flex items-center gap-1 cursor-pointer"
+                          >
+                            <span className="material-symbols-outlined text-sm">chevron_left</span>
+                            Sebelumnya
+                          </button>
+                          
+                          {/* Generate quick page numbers */}
+                          {Array.from({ length: totalPortfolioPages }, (_, i) => i + 1)
+                            .filter(p => p === 1 || p === totalPortfolioPages || Math.abs(p - portfolioPage) <= 1)
+                            .map((p, index, arr) => {
+                              const elements = [];
+                              if (index > 0 && p - arr[index - 1] > 1) {
+                                elements.push(
+                                  <span key={`dots-${p}`} className="px-2 py-1 text-xs text-slate-400 flex items-end">...</span>
+                                );
+                              }
+                              elements.push(
+                                <button
+                                  key={p}
+                                  onClick={() => setPortfolioPage(p)}
+                                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                                    portfolioPage === p 
+                                      ? "bg-blue-600 text-white shadow-md shadow-blue-600/10" 
+                                      : "border border-slate-200 text-slate-600 hover:bg-slate-100"
+                                  }`}
+                                >
+                                  {p}
+                                </button>
+                              );
+                              return elements;
+                            })}
+
+                          <button
+                            onClick={() => setPortfolioPage(p => Math.min(totalPortfolioPages, p + 1))}
+                            disabled={portfolioPage === totalPortfolioPages}
+                            className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors flex items-center gap-1 cursor-pointer"
+                          >
+                            Selanjutnya
+                            <span className="material-symbols-outlined text-sm">chevron_right</span>
+                          </button>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
