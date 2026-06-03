@@ -33,9 +33,9 @@ export async function POST(request: Request) {
     await saveDb(db);
 
     return NextResponse.json({ success: true, service: newService });
-  } catch (error) {
+  } catch (error: any) {
     console.error("POST services error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
 
@@ -68,9 +68,9 @@ export async function PUT(request: Request) {
 
     await saveDb(db);
     return NextResponse.json({ success: true, service: db.services[index] });
-  } catch (error) {
+  } catch (error: any) {
     console.error("PUT services error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
 
@@ -97,8 +97,8 @@ export async function DELETE(request: Request) {
     await saveDb(db);
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error("DELETE services error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }

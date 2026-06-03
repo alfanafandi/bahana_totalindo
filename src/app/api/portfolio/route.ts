@@ -33,9 +33,9 @@ export async function POST(request: Request) {
     await saveDb(db);
 
     return NextResponse.json({ success: true, item: newPortfolioItem });
-  } catch (error) {
+  } catch (error: any) {
     console.error("POST portfolio error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
 
@@ -68,9 +68,9 @@ export async function PUT(request: Request) {
 
     await saveDb(db);
     return NextResponse.json({ success: true, item: db.portfolio[index] });
-  } catch (error) {
+  } catch (error: any) {
     console.error("PUT portfolio error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
 
@@ -97,8 +97,8 @@ export async function DELETE(request: Request) {
     await saveDb(db);
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error("DELETE portfolio error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }
