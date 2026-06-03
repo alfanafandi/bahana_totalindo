@@ -496,7 +496,7 @@ export default function AdminDashboardPage() {
       )}
 
       {/* Sidebar Navigation */}
-      <aside className="w-80 border-r border-slate-200 bg-white p-8 flex flex-col justify-between hidden lg:flex sticky top-0 h-screen">
+      <aside className="w-80 border-r border-slate-200 bg-white p-8 flex flex-col gap-10 hidden lg:flex sticky top-0 h-screen">
         <div className="space-y-12">
           {/* Logo Brand */}
           <div className="flex items-center gap-3">
@@ -533,26 +533,6 @@ export default function AdminDashboardPage() {
               </button>
             ))}
           </nav>
-        </div>
-
-        {/* User Stats & Logout */}
-        <div className="space-y-6 pt-6 border-t border-slate-100">
-          <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
-            <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
-              <span className="material-symbols-outlined text-slate-500">person</span>
-            </div>
-            <div>
-              <h4 className="text-xs font-black text-slate-800 uppercase">Administrator</h4>
-              <span className="text-[10px] text-green-600 font-semibold uppercase tracking-wider">Online</span>
-            </div>
-          </div>
-          <button
-            onClick={handleLogout}
-            className="w-full flex items-center justify-center gap-3 py-3 border-2 border-slate-200 hover:border-red-500 hover:bg-red-50 text-slate-500 hover:text-red-650 rounded-lg text-xs font-bold uppercase tracking-widest transition-all"
-          >
-            <span className="material-symbols-outlined text-sm">logout</span>
-            Keluar Sesi
-          </button>
         </div>
       </aside>
 
@@ -594,6 +574,14 @@ export default function AdminDashboardPage() {
               <span>Live Site</span>
               <span className="material-symbols-outlined text-sm">open_in_new</span>
             </a>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 border-2 border-slate-200 hover:border-red-500 hover:bg-red-50 text-slate-500 hover:text-red-650 rounded-lg text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2 bg-white cursor-pointer"
+              title="Keluar Sesi"
+            >
+              <span>Keluar</span>
+              <span className="material-symbols-outlined text-sm">logout</span>
+            </button>
           </div>
         </header>
 
