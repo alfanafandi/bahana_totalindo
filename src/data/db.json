@@ -1,0 +1,1269 @@
+{
+  "company": {
+    "name": "PT. Bahana Totalindo Teknik",
+    "email": "bahana.tteknik@gmail.com",
+    "phone": "021 - 89442250",
+    "whatsapp": "6281282404353",
+    "address": "Harapan Indah, Ruko Symphony Blok HX No.15, Jl. Symphony Pusaka Rakyat, Kec. Tarumajaya, Bekasi, Jawa Barat.",
+    "aboutText": "PT. Bahana Totalindo Teknik berdiri sebagai pilar dalam industri konstruksi umum di Indonesia. Fokus kami adalah memberikan solusi teknis yang komprehensif, mulai dari pondasi sipil hingga detail interior yang rumit.",
+    "vision": "berkomitmen memberikan pelayanan yang terbaik dibidangnya serta Memberikan solusi dan kepuasan pelanggan yang utama.",
+    "mission": "selalu mempertahankan integritas, loyalitas dan dedikasi yang tinggi terhadap pelanggan, serta memberikan layanan jasa yang prima dengan mengedepankan kepuasan pelanggan, hasil yang berkualitas dengan standar yang ada."
+  },
+  "stats": [
+    {
+      "id": "1",
+      "value": "500+",
+      "label": "Projects Completed"
+    },
+    {
+      "id": "2",
+      "value": "15+",
+      "label": "Years Experience"
+    },
+    {
+      "id": "3",
+      "value": "100%",
+      "label": "Precision Quality"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Architecture",
+      "description": "Perancangan struktur dan bangunan sipil dari pondasi berstandar nasional hingga wujud bangunan utuh yang estetik dan kokoh.",
+      "image": "/uploads/1780462130446-img276.jpg",
+      "icon": "foundation"
+    },
+    {
+      "id": "2",
+      "title": "Mekanikal Elektrikal",
+      "description": "Mechanical, Electrical, and Plumbing engineering yang efisien dan aman untuk skala industri maupun komersial.",
+      "image": "/assets/portofolio/img159.jpg",
+      "icon": "electric_bolt"
+    },
+    {
+      "id": "3",
+      "title": "Tata Udara (HVAC)",
+      "description": "Sistem sirkulasi udara dan kontrol suhu presisi untuk kenyamanan optimal dalam gedung dan fasilitas pabrik.",
+      "image": "/uploads/1780462094204-img167.jpg",
+      "icon": "ac_unit"
+    },
+    {
+      "id": "4",
+      "title": "Interior",
+      "description": "Transformasi ruang dengan detail interior yang rapi, menggabungkan estetika modern dan material premium terbaik.",
+      "image": "/assets/portofolio/img232.jpg",
+      "icon": "format_paint"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Industrial Turbine V2",
+      "category": "Mechanical Series",
+      "price": "POA",
+      "status": "In Stock",
+      "description": "High-performance air distribution unit for heavy-duty industrial ventilation systems.",
+      "image": "/assets/services/img44.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Smart Grid Panel",
+      "category": "Electrical Tier",
+      "price": "POA",
+      "status": "In Stock",
+      "description": "Automated power management system with real-time diagnostic reporting capabilities.",
+      "image": "/assets/services/img48.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Cast Architectural Slab",
+      "category": "Civil Finish",
+      "price": "POA",
+      "status": "In Stock",
+      "description": "Custom-poured high-strength concrete slabs with precision edge detailing for modern exteriors.",
+      "image": "/assets/services/img50.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Flow-Max Manifold",
+      "category": "MEP Utility",
+      "price": "POA",
+      "status": "In Stock",
+      "description": "Precision copper piping manifold for multi-zone hydraulic heating and cooling networks.",
+      "image": "/assets/services/img57.jpg"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "Proyek BTT - img159",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img159.jpg"
+    },
+    {
+      "id": "port-2",
+      "title": "Proyek BTT - img160",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img160.jpg"
+    },
+    {
+      "id": "port-3",
+      "title": "Proyek BTT - img161",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img161.jpg"
+    },
+    {
+      "id": "port-4",
+      "title": "Proyek BTT - img163",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img163.jpg"
+    },
+    {
+      "id": "port-5",
+      "title": "Proyek BTT - img164",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img164.jpg"
+    },
+    {
+      "id": "port-6",
+      "title": "Proyek BTT - img165",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img165.jpg"
+    },
+    {
+      "id": "port-7",
+      "title": "Proyek BTT - img166",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img166.jpg"
+    },
+    {
+      "id": "port-8",
+      "title": "Proyek BTT - img167",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img167.jpg"
+    },
+    {
+      "id": "port-9",
+      "title": "Proyek BTT - img168",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img168.jpg"
+    },
+    {
+      "id": "port-10",
+      "title": "Proyek BTT - img169",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img169.jpg"
+    },
+    {
+      "id": "port-11",
+      "title": "Proyek BTT - img170",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img170.jpg"
+    },
+    {
+      "id": "port-12",
+      "title": "Proyek BTT - img171",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img171.jpg"
+    },
+    {
+      "id": "port-13",
+      "title": "Proyek BTT - img172",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img172.jpg"
+    },
+    {
+      "id": "port-14",
+      "title": "Proyek BTT - img173",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img173.jpg"
+    },
+    {
+      "id": "port-15",
+      "title": "Proyek BTT - img174",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img174.jpg"
+    },
+    {
+      "id": "port-16",
+      "title": "Proyek BTT - img175",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img175.jpg"
+    },
+    {
+      "id": "port-17",
+      "title": "Proyek BTT - img176",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img176.jpg"
+    },
+    {
+      "id": "port-18",
+      "title": "Proyek BTT - img177",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img177.jpg"
+    },
+    {
+      "id": "port-19",
+      "title": "Proyek BTT - img178",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img178.jpg"
+    },
+    {
+      "id": "port-20",
+      "title": "Proyek BTT - img179",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img179.jpg"
+    },
+    {
+      "id": "port-21",
+      "title": "Proyek BTT - img180",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img180.jpg"
+    },
+    {
+      "id": "port-22",
+      "title": "Proyek BTT - img181",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img181.jpg"
+    },
+    {
+      "id": "port-23",
+      "title": "Proyek BTT - img182",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img182.jpg"
+    },
+    {
+      "id": "port-24",
+      "title": "Proyek BTT - img183",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img183.jpg"
+    },
+    {
+      "id": "port-25",
+      "title": "Proyek BTT - img184",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img184.jpg"
+    },
+    {
+      "id": "port-26",
+      "title": "Proyek BTT - img187",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img187.jpg"
+    },
+    {
+      "id": "port-27",
+      "title": "Proyek BTT - img188",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img188.jpg"
+    },
+    {
+      "id": "port-28",
+      "title": "Proyek BTT - img189",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img189.jpg"
+    },
+    {
+      "id": "port-29",
+      "title": "Proyek BTT - img190",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img190.jpg"
+    },
+    {
+      "id": "port-30",
+      "title": "Proyek BTT - img191",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img191.jpg"
+    },
+    {
+      "id": "port-31",
+      "title": "Proyek BTT - img192",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img192.jpg"
+    },
+    {
+      "id": "port-32",
+      "title": "Proyek BTT - img193",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img193.jpg"
+    },
+    {
+      "id": "port-33",
+      "title": "Proyek BTT - img194",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img194.jpg"
+    },
+    {
+      "id": "port-34",
+      "title": "Proyek BTT - img195",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img195.jpg"
+    },
+    {
+      "id": "port-35",
+      "title": "Proyek BTT - img196",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img196.jpg"
+    },
+    {
+      "id": "port-36",
+      "title": "Proyek BTT - img197",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img197.jpg"
+    },
+    {
+      "id": "port-37",
+      "title": "Proyek BTT - img198",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img198.jpg"
+    },
+    {
+      "id": "port-38",
+      "title": "Proyek BTT - img199",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img199.jpg"
+    },
+    {
+      "id": "port-39",
+      "title": "Proyek BTT - img200",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img200.jpg"
+    },
+    {
+      "id": "port-40",
+      "title": "Proyek BTT - img201",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img201.jpg"
+    },
+    {
+      "id": "port-41",
+      "title": "Proyek BTT - img202",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img202.jpg"
+    },
+    {
+      "id": "port-42",
+      "title": "Proyek BTT - img203",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img203.jpg"
+    },
+    {
+      "id": "port-43",
+      "title": "Proyek BTT - img204",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img204.jpg"
+    },
+    {
+      "id": "port-44",
+      "title": "Proyek BTT - img205",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img205.jpg"
+    },
+    {
+      "id": "port-45",
+      "title": "Proyek BTT - img206",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img206.jpg"
+    },
+    {
+      "id": "port-46",
+      "title": "Proyek BTT - img207",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img207.jpg"
+    },
+    {
+      "id": "port-47",
+      "title": "Proyek BTT - img208",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img208.jpg"
+    },
+    {
+      "id": "port-48",
+      "title": "Proyek BTT - img209",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img209.jpg"
+    },
+    {
+      "id": "port-49",
+      "title": "Proyek BTT - img210",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img210.jpg"
+    },
+    {
+      "id": "port-50",
+      "title": "Proyek BTT - img211",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img211.jpg"
+    },
+    {
+      "id": "port-51",
+      "title": "Proyek BTT - img212",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img212.jpg"
+    },
+    {
+      "id": "port-52",
+      "title": "Proyek BTT - img213",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img213.jpg"
+    },
+    {
+      "id": "port-53",
+      "title": "Proyek BTT - img216",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img216.jpg"
+    },
+    {
+      "id": "port-54",
+      "title": "Proyek BTT - img217",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img217.jpg"
+    },
+    {
+      "id": "port-55",
+      "title": "Proyek BTT - img218",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img218.jpg"
+    },
+    {
+      "id": "port-56",
+      "title": "Proyek BTT - img219",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img219.jpg"
+    },
+    {
+      "id": "port-57",
+      "title": "Proyek BTT - img220",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img220.jpg"
+    },
+    {
+      "id": "port-58",
+      "title": "Proyek BTT - img221",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img221.jpg"
+    },
+    {
+      "id": "port-59",
+      "title": "Proyek BTT - img222",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img222.jpg"
+    },
+    {
+      "id": "port-60",
+      "title": "Proyek BTT - img223",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img223.jpg"
+    },
+    {
+      "id": "port-61",
+      "title": "Proyek BTT - img224",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img224.jpg"
+    },
+    {
+      "id": "port-62",
+      "title": "Proyek BTT - img225",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img225.jpg"
+    },
+    {
+      "id": "port-63",
+      "title": "Proyek BTT - img228",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img228.jpg"
+    },
+    {
+      "id": "port-64",
+      "title": "Proyek BTT - img229",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img229.jpg"
+    },
+    {
+      "id": "port-65",
+      "title": "Proyek BTT - img230",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img230.jpg"
+    },
+    {
+      "id": "port-66",
+      "title": "Proyek BTT - img231",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img231.jpg"
+    },
+    {
+      "id": "port-67",
+      "title": "Proyek BTT - img232",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img232.jpg"
+    },
+    {
+      "id": "port-68",
+      "title": "Proyek BTT - img233",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img233.jpg"
+    },
+    {
+      "id": "port-69",
+      "title": "Proyek BTT - img234",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img234.jpg"
+    },
+    {
+      "id": "port-70",
+      "title": "Proyek BTT - img235",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img235.jpg"
+    },
+    {
+      "id": "port-71",
+      "title": "Proyek BTT - img238",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img238.jpg"
+    },
+    {
+      "id": "port-72",
+      "title": "Proyek BTT - img239",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img239.jpg"
+    },
+    {
+      "id": "port-73",
+      "title": "Proyek BTT - img240",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img240.jpg"
+    },
+    {
+      "id": "port-74",
+      "title": "Proyek BTT - img241",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img241.jpg"
+    },
+    {
+      "id": "port-75",
+      "title": "Proyek BTT - img242",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img242.jpg"
+    },
+    {
+      "id": "port-76",
+      "title": "Proyek BTT - img243",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img243.jpg"
+    },
+    {
+      "id": "port-77",
+      "title": "Proyek BTT - img246",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img246.jpg"
+    },
+    {
+      "id": "port-78",
+      "title": "Proyek BTT - img247",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img247.jpg"
+    },
+    {
+      "id": "port-79",
+      "title": "Proyek BTT - img248",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img248.jpg"
+    },
+    {
+      "id": "port-80",
+      "title": "Proyek BTT - img249",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img249.jpg"
+    },
+    {
+      "id": "port-81",
+      "title": "Proyek BTT - img250",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img250.jpg"
+    },
+    {
+      "id": "port-82",
+      "title": "Proyek BTT - img251",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img251.jpg"
+    },
+    {
+      "id": "port-83",
+      "title": "Proyek BTT - img252",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img252.jpg"
+    },
+    {
+      "id": "port-84",
+      "title": "Proyek BTT - img253",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img253.jpg"
+    },
+    {
+      "id": "port-85",
+      "title": "Proyek BTT - img254",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img254.jpg"
+    },
+    {
+      "id": "port-86",
+      "title": "Proyek BTT - img255",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img255.jpg"
+    },
+    {
+      "id": "port-87",
+      "title": "Proyek BTT - img258",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img258.jpg"
+    },
+    {
+      "id": "port-88",
+      "title": "Proyek BTT - img259",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img259.jpg"
+    },
+    {
+      "id": "port-89",
+      "title": "Proyek BTT - img260",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img260.jpg"
+    },
+    {
+      "id": "port-90",
+      "title": "Proyek BTT - img261",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img261.jpg"
+    },
+    {
+      "id": "port-91",
+      "title": "Proyek BTT - img262",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img262.jpg"
+    },
+    {
+      "id": "port-92",
+      "title": "Proyek BTT - img263",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img263.jpg"
+    },
+    {
+      "id": "port-93",
+      "title": "Proyek BTT - img264",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img264.jpg"
+    },
+    {
+      "id": "port-94",
+      "title": "Proyek BTT - img265",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img265.jpg"
+    },
+    {
+      "id": "port-95",
+      "title": "Proyek BTT - img266",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img266.jpg"
+    },
+    {
+      "id": "port-96",
+      "title": "Proyek BTT - img267",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img267.jpg"
+    },
+    {
+      "id": "port-97",
+      "title": "Proyek BTT - img268",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img268.jpg"
+    },
+    {
+      "id": "port-98",
+      "title": "Proyek BTT - img271",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img271.jpg"
+    },
+    {
+      "id": "port-99",
+      "title": "Proyek BTT - img272",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img272.jpg"
+    },
+    {
+      "id": "port-100",
+      "title": "Proyek BTT - img273",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img273.jpg"
+    },
+    {
+      "id": "port-101",
+      "title": "Proyek BTT - img274",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img274.jpg"
+    },
+    {
+      "id": "port-102",
+      "title": "Proyek BTT - img275",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img275.jpg"
+    },
+    {
+      "id": "port-103",
+      "title": "Proyek BTT - img276",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img276.jpg"
+    },
+    {
+      "id": "port-104",
+      "title": "Proyek BTT - img277",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img277.jpg"
+    },
+    {
+      "id": "port-105",
+      "title": "Proyek BTT - img278",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img278.jpg"
+    },
+    {
+      "id": "port-106",
+      "title": "Proyek BTT - img279",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img279.jpg"
+    },
+    {
+      "id": "port-107",
+      "title": "Proyek BTT - img280",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img280.jpg"
+    },
+    {
+      "id": "port-108",
+      "title": "Proyek BTT - img281",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img281.jpg"
+    },
+    {
+      "id": "port-109",
+      "title": "Proyek BTT - img282",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img282.jpg"
+    },
+    {
+      "id": "port-110",
+      "title": "Proyek BTT - img283",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img283.jpg"
+    },
+    {
+      "id": "port-111",
+      "title": "Proyek BTT - img284",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img284.jpg"
+    },
+    {
+      "id": "port-112",
+      "title": "Proyek BTT - img285",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img285.jpg"
+    },
+    {
+      "id": "port-113",
+      "title": "Proyek BTT - img286",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img286.jpg"
+    },
+    {
+      "id": "port-114",
+      "title": "Proyek BTT - img287",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img287.jpg"
+    },
+    {
+      "id": "port-115",
+      "title": "Proyek BTT - img288",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img288.jpg"
+    },
+    {
+      "id": "port-116",
+      "title": "Proyek BTT - img289",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img289.jpg"
+    },
+    {
+      "id": "port-117",
+      "title": "Proyek BTT - img290",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img290.jpg"
+    },
+    {
+      "id": "port-118",
+      "title": "Proyek BTT - img291",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img291.jpg"
+    },
+    {
+      "id": "port-119",
+      "title": "Proyek BTT - img292",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img292.jpg"
+    },
+    {
+      "id": "port-120",
+      "title": "Proyek BTT - img293",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img293.jpg"
+    },
+    {
+      "id": "port-121",
+      "title": "Proyek BTT - img294",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img294.jpg"
+    },
+    {
+      "id": "port-122",
+      "title": "Proyek BTT - img295",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img295.jpg"
+    },
+    {
+      "id": "port-123",
+      "title": "Proyek BTT - img298",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img298.jpg"
+    },
+    {
+      "id": "port-124",
+      "title": "Proyek BTT - img299",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img299.jpg"
+    },
+    {
+      "id": "port-125",
+      "title": "Proyek BTT - img300",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img300.jpg"
+    },
+    {
+      "id": "port-126",
+      "title": "Proyek BTT - img301",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img301.jpg"
+    },
+    {
+      "id": "port-127",
+      "title": "Proyek BTT - img302",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img302.jpg"
+    },
+    {
+      "id": "port-128",
+      "title": "Proyek BTT - img303",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img303.jpg"
+    },
+    {
+      "id": "port-129",
+      "title": "Proyek BTT - img304",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img304.jpg"
+    },
+    {
+      "id": "port-130",
+      "title": "Proyek BTT - img305",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img305.jpg"
+    },
+    {
+      "id": "port-131",
+      "title": "Proyek BTT - img306",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img306.jpg"
+    },
+    {
+      "id": "port-132",
+      "title": "Proyek BTT - img307",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img307.jpg"
+    },
+    {
+      "id": "port-133",
+      "title": "Proyek BTT - img308",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img308.jpg"
+    },
+    {
+      "id": "port-134",
+      "title": "Proyek BTT - img309",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img309.jpg"
+    },
+    {
+      "id": "port-135",
+      "title": "Proyek BTT - img310",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img310.jpg"
+    },
+    {
+      "id": "port-136",
+      "title": "Proyek BTT - img311",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img311.jpg"
+    },
+    {
+      "id": "port-137",
+      "title": "Proyek BTT - img314",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img314.jpg"
+    },
+    {
+      "id": "port-138",
+      "title": "Proyek BTT - img316",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img316.jpg"
+    },
+    {
+      "id": "port-139",
+      "title": "Proyek BTT - img317",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img317.jpg"
+    },
+    {
+      "id": "port-140",
+      "title": "Proyek BTT - img319",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img319.jpg"
+    },
+    {
+      "id": "port-141",
+      "title": "Proyek BTT - img321",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img321.jpg"
+    },
+    {
+      "id": "port-142",
+      "title": "Proyek BTT - img322",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img322.jpg"
+    },
+    {
+      "id": "port-143",
+      "title": "Proyek BTT - img323",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img323.jpg"
+    },
+    {
+      "id": "port-144",
+      "title": "Proyek BTT - img325",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img325.jpg"
+    },
+    {
+      "id": "port-145",
+      "title": "Proyek BTT - img326",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img326.jpg"
+    },
+    {
+      "id": "port-146",
+      "title": "Proyek BTT - img327",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img327.jpg"
+    },
+    {
+      "id": "port-147",
+      "title": "Proyek BTT - img328",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img328.jpg"
+    },
+    {
+      "id": "port-148",
+      "title": "Proyek BTT - img330",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img330.jpg"
+    },
+    {
+      "id": "port-149",
+      "title": "Proyek BTT - img331",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img331.jpg"
+    },
+    {
+      "id": "port-150",
+      "title": "Proyek BTT - img332",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img332.jpg"
+    },
+    {
+      "id": "port-151",
+      "title": "Proyek BTT - img334",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img334.jpg"
+    },
+    {
+      "id": "port-152",
+      "title": "Proyek BTT - img336",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img336.jpg"
+    },
+    {
+      "id": "port-153",
+      "title": "Proyek BTT - img337",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img337.jpg"
+    },
+    {
+      "id": "port-154",
+      "title": "Proyek BTT - img338",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img338.jpg"
+    },
+    {
+      "id": "port-155",
+      "title": "Proyek BTT - img341",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img341.jpg"
+    },
+    {
+      "id": "port-156",
+      "title": "Proyek BTT - img342",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img342.jpg"
+    },
+    {
+      "id": "port-157",
+      "title": "Proyek BTT - img343",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img343.jpg"
+    },
+    {
+      "id": "port-158",
+      "title": "Proyek BTT - img344",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img344.jpg"
+    },
+    {
+      "id": "port-159",
+      "title": "Proyek BTT - img345",
+      "category": "HVAC",
+      "status": "Selesai",
+      "image": "img345.jpg"
+    },
+    {
+      "id": "port-160",
+      "title": "Proyek BTT - img346",
+      "category": "Interior",
+      "status": "Selesai",
+      "image": "img346.jpg"
+    },
+    {
+      "id": "port-161",
+      "title": "Proyek BTT - img347",
+      "category": "Civil",
+      "status": "Selesai",
+      "image": "img347.jpg"
+    },
+    {
+      "id": "port-162",
+      "title": "Proyek BTT - img348",
+      "category": "MEP",
+      "status": "Selesai",
+      "image": "img348.jpg"
+    }
+  ],
+  "clients": [
+    "RSCM",
+    "RSIA Bunda",
+    "RS Brawijaya",
+    "Klinik Westerindo",
+    "RS Izza",
+    "SamMarie",
+    "RSIA YPK Mandiri",
+    "Morula IVF",
+    "RS Bethsaida",
+    "RS Mentari",
+    "RS Sentosa",
+    "RS PHC",
+    "RSAL",
+    "Primaya Hospital",
+    "RS Ciputra",
+    "RSKIA Sadewa",
+    "RSUD Pasar Minggu",
+    "RS Marinir Cilandak",
+    "Lantamal AL",
+    "PT Indofood",
+    "PT Sinar Sosro",
+    "PT Capsugel",
+    "PT Novel Pharmaceutical",
+    "PT Fonusa Agung Mulia",
+    "PT Bengawan Sinergy"
+  ],
+  "equipment": [
+    "Air Shower (custome bahan SUS & MS Powder Coating)",
+    "Pass box type static & dinamix",
+    "Scrubstation, zink (custome)",
+    "Operating timer digital",
+    "Pintu swing, sliding otomatik (Panel Sandwich & SUS).",
+    "Fan Filter Unit (FFU)",
+    "Filter AHU hospital, farmasi, (custome)"
+  ]
+}

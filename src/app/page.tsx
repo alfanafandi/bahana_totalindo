@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/partials/Navbar";
+import { getDb } from "@/lib/db";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const db = await getDb();
+  const { company, stats, services, clients } = db;
+
   return (
     <>
       <Navbar />
@@ -58,24 +64,17 @@ export default function Home() {
         {/* Stats Block (Asymmetric Layout) */}
         <section className="relative -mt-20 z-20 px-8 container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-surface-container-lowest shadow-2xl rounded-lg overflow-hidden">
-            <div className="p-10 border-r border-surface-container">
-              <h3 className="text-4xl font-black text-primary mb-2">500+</h3>
-              <p className="text-xs uppercase tracking-[0.2em] font-bold text-secondary">
-                Projects Completed
-              </p>
-            </div>
-            <div className="p-10 border-r border-surface-container bg-surface-container-low">
-              <h3 className="text-4xl font-black text-primary mb-2">15+</h3>
-              <p className="text-xs uppercase tracking-[0.2em] font-bold text-secondary">
-                Years Experience
-              </p>
-            </div>
-            <div className="p-10">
-              <h3 className="text-4xl font-black text-primary mb-2">100%</h3>
-              <p className="text-xs uppercase tracking-[0.2em] font-bold text-secondary">
-                Precision Quality
-              </p>
-            </div>
+            {stats.slice(0, 3).map((stat, idx) => (
+              <div 
+                key={stat.id} 
+                className={`p-10 ${idx < 2 ? "border-r border-surface-container" : ""} ${idx === 1 ? "bg-surface-container-low" : ""}`}
+              >
+                <h3 className="text-4xl font-black text-primary mb-2">{stat.value}</h3>
+                <p className="text-xs uppercase tracking-[0.2em] font-bold text-secondary">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -113,10 +112,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-lg text-on-surface-variant leading-relaxed">
-                PT. Bahana Totalindo Teknik berdiri sebagai pilar dalam industri
-                konstruksi umum di Indonesia. Fokus kami adalah memberikan
-                solusi teknis yang komprehensif, mulai dari pondasi sipil hingga
-                detail interior yang rumit.
+                {company.aboutText}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
                 <div className="flex gap-4">
@@ -169,99 +165,83 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-              {/* Service 1: Architecture */}
-              <div className="md:col-span-8 group relative bg-surface-container-lowest rounded-xl overflow-hidden min-h-[400px] flex items-end">
-                <img
-                  alt="Architecture"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/assets/portofolio/img181.jpg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                <div className="relative p-12 w-full">
-                  <span className="material-symbols-outlined text-white text-5xl mb-6">
-                    foundation
-                  </span>
-                  <h3 className="text-3xl font-black text-white mb-4 uppercase">
-                    Architecture
-                  </h3>
-                  <p className="text-white/80 max-w-md">
-                    Perancangan struktur dan bangunan sipil dari pondasi
-                    berstandar nasional hingga wujud bangunan utuh yang estetik
-                    dan kokoh.
-                  </p>
-                </div>
-              </div>
-              {/* Service 2: Mekanikal Elektrikal */}
-              <div className="md:col-span-4 group relative bg-primary rounded-xl overflow-hidden min-h-[400px] flex items-end">
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                  <img
-                    alt="MEP Engineering"
-                    className="w-full h-full object-cover"
-                    src="/assets/portofolio/img159.jpg"
-                  />
-                </div>
-                <div className="relative p-10 w-full">
-                  <span className="material-symbols-outlined text-secondary-fixed text-5xl mb-6">
-                    electric_bolt
-                  </span>
-                  <h3 className="text-2xl font-black text-white mb-4 uppercase">
-                    Mekanikal Elektrikal
-                  </h3>
-                  <p className="text-white/70 text-sm">
-                    Mechanical, Electrical, and Plumbing engineering yang
-                    efisien dan aman untuk skala industri maupun komersial.
-                  </p>
-                </div>
-              </div>
-              {/* Service 3: Tata Udara */}
-              <div className="md:col-span-4 group relative bg-surface-container-lowest border border-surface-container rounded-xl overflow-hidden min-h-[400px] flex items-end">
-                <img
-                  alt="HVAC"
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
-                  src="/assets/services/img46.jpg"
-                />
-                <div className="p-10 w-full relative z-10 bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="material-symbols-outlined text-white text-5xl mb-6">
-                    ac_unit
-                  </span>
-                  <h3 className="text-2xl font-black text-white mb-4 uppercase">
-                    Tata Udara (HVAC)
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    Sistem sirkulasi udara dan kontrol suhu presisi untuk
-                    kenyamanan optimal dalam gedung dan fasilitas pabrik.
-                  </p>
-                  <div className="mt-8 pt-8 border-t border-white/20 flex items-center justify-between group">
-                    <span className="text-xs font-bold uppercase tracking-widest text-white">
-                      Details
-                    </span>
-                    <span className="material-symbols-outlined text-white group-hover:translate-x-2 transition-transform">
-                      arrow_forward
-                    </span>
+              {services.map((service, idx) => {
+                // Layout pattern: Service 1 (span 8), Service 2 (span 4), Service 3 (span 4), Service 4 (span 8)
+                const spanClass = idx % 4 === 0 || idx % 4 === 3 ? "md:col-span-8" : "md:col-span-4";
+                
+                // Keep the styling matching the design system
+                // Second item (idx 1) is high contrast primary solid bg
+                const isPrimaryBg = idx % 4 === 1;
+                // Fourth item (idx 3) uses card-overlay layout with text inside
+                const isOverlayCard = idx % 4 === 3;
+
+                return (
+                  <div 
+                    key={service.id}
+                    className={`${spanClass} group relative rounded-xl overflow-hidden min-h-[400px] flex items-end ${
+                      isPrimaryBg ? "bg-primary text-white" : "bg-surface-container-lowest"
+                    }`}
+                  >
+                    {!isPrimaryBg && !isOverlayCard && (
+                      <>
+                        <img
+                          alt={service.title}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          src={service.image}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+                      </>
+                    )}
+
+                    {isPrimaryBg && (
+                      <div className="absolute inset-0 opacity-20 pointer-events-none">
+                        <img
+                          alt={service.title}
+                          className="w-full h-full object-cover"
+                          src={service.image}
+                        />
+                      </div>
+                    )}
+
+                    {isOverlayCard && (
+                      <>
+                        <img
+                          alt={service.title}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          src={service.image}
+                        />
+                        <div className="absolute inset-0 bg-white/10 group-hover:bg-transparent transition-colors"></div>
+                      </>
+                    )}
+
+                    {isOverlayCard ? (
+                      <div className="relative p-12 w-full bg-surface-container-lowest/80 backdrop-blur-md md:max-w-md m-6 rounded-lg text-on-surface">
+                        <span className="material-symbols-outlined text-primary text-4xl mb-4">
+                          {service.icon}
+                        </span>
+                        <h3 className="text-2xl font-black mb-2 uppercase">
+                          {service.title}
+                        </h3>
+                        <p className="text-on-surface-variant text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="relative p-10 w-full z-10">
+                        <span className={`material-symbols-outlined ${isPrimaryBg ? "text-secondary-fixed" : "text-white"} text-5xl mb-6`}>
+                          {service.icon}
+                        </span>
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase">
+                          {service.title}
+                        </h3>
+                        <p className={`${isPrimaryBg ? "text-white/70" : "text-white/80"} text-sm leading-relaxed`}>
+                          {service.description}
+                        </p>
+                      </div>
+                    )}
                   </div>
-                </div>
-              </div>
-              {/* Service 4: Interior */}
-              <div className="md:col-span-8 group relative bg-surface-container-highest rounded-xl overflow-hidden min-h-[400px] flex items-end">
-                <img
-                  alt="Interior Design"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="/assets/portofolio/img232.jpg"
-                />
-                <div className="absolute inset-0 bg-white/10 group-hover:bg-transparent transition-colors"></div>
-                <div className="relative p-12 w-full bg-surface-container-lowest/80 backdrop-blur-md md:max-w-md m-6 rounded-lg">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-4">
-                    format_paint
-                  </span>
-                  <h3 className="text-2xl font-black text-on-surface mb-2 uppercase">
-                    Interior
-                  </h3>
-                  <p className="text-on-surface-variant text-sm">
-                    Transformasi ruang dengan detail interior yang rapi,
-                    menggabungkan estetika modern dan material premium terbaik.
-                  </p>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -283,33 +263,7 @@ export default function Home() {
           {/* Infinite Marquee */}
           <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll whitespace-nowrap py-4">
-              {[
-                "RSCM",
-                "RSIA Bunda",
-                "RS Brawijaya",
-                "Klinik Westerindo",
-                "RS Izza",
-                "SamMarie",
-                "RSIA YPK Mandiri",
-                "Morula IVF",
-                "RS Bethsaida",
-                "RS Mentari",
-                "RS Sentosa",
-                "RS PHC",
-                "RSAL",
-                "Primaya Hospital",
-                "RS Ciputra",
-                "RSKIA Sadewa",
-                "RSUD Pasar Minggu",
-                "RS Marinir Cilandak",
-                "Lantamal AL",
-                "PT Indofood",
-                "PT Sinar Sosro",
-                "PT Capsugel",
-                "PT Novel Pharmaceutical",
-                "PT Fonusa Agung Mulia",
-                "PT Bengawan Sinergy",
-              ].map((client, i) => (
+              {clients.map((client, i) => (
                 <li
                   key={i}
                   className="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"
@@ -329,33 +283,7 @@ export default function Home() {
               className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll whitespace-nowrap py-4"
               aria-hidden="true"
             >
-              {[
-                "RSCM",
-                "RSIA Bunda",
-                "RS Brawijaya",
-                "Klinik Westerindo",
-                "RS Izza",
-                "SamMarie",
-                "RSIA YPK Mandiri",
-                "Morula IVF",
-                "RS Bethsaida",
-                "RS Mentari",
-                "RS Sentosa",
-                "RS PHC",
-                "RSAL",
-                "Primaya Hospital",
-                "RS Ciputra",
-                "RSKIA Sadewa",
-                "RSUD Pasar Minggu",
-                "RS Marinir Cilandak",
-                "Lantamal AL",
-                "PT Indofood",
-                "PT Sinar Sosro",
-                "PT Capsugel",
-                "PT Novel Pharmaceutical",
-                "PT Fonusa Agung Mulia",
-                "PT Bengawan Sinergy",
-              ].map((client, i) => (
+              {clients.map((client, i) => (
                 <li
                   key={i + 100}
                   className="flex items-center gap-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer"
@@ -400,7 +328,9 @@ export default function Home() {
                 <div className="space-y-6">
                   <a
                     className="flex items-center gap-6 p-6 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all group"
-                    href="https://wa.me/628123456789"
+                    href={`https://wa.me/${company.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <div className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center">
                       <span className="material-symbols-outlined text-white text-3xl">
@@ -411,7 +341,7 @@ export default function Home() {
                       <h4 className="text-white font-bold uppercase tracking-widest text-xs">
                         WhatsApp Direct
                       </h4>
-                      <p className="text-slate-400 text-lg">+62 812 3456 789</p>
+                      <p className="text-slate-400 text-lg">+{company.whatsapp.replace(/(\d{2})(\d{3})(\d{4})(\d+)/, "$1 $2-$3-$4")}</p>
                     </div>
                     <span className="material-symbols-outlined text-white/30 ml-auto group-hover:text-white transition-colors">
                       open_in_new
@@ -428,13 +358,13 @@ export default function Home() {
                         Email Inquiry
                       </h4>
                       <p className="text-slate-400 text-lg">
-                        info@btt-teknik.co.id
+                        {company.email}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-12 rounded-xl shadow-2xl">
+              <div className="bg-white p-12 rounded-xl shadow-2xl text-on-surface">
                 <h3 className="text-2xl font-black text-primary mb-8 uppercase">
                   Kirim Pesan
                 </h3>
@@ -464,10 +394,9 @@ export default function Home() {
                       Layanan
                     </label>
                     <select className="w-full border-b border-slate-200 py-3 focus:border-primary outline-none text-sm bg-transparent">
-                      <option>Civil Construction</option>
-                      <option>MEP Systems</option>
-                      <option>HVAC Solutions</option>
-                      <option>Interior Design</option>
+                      {services.map(s => (
+                        <option key={s.id}>{s.title}</option>
+                      ))}
                     </select>
                   </div>
                   <div className="space-y-2">
@@ -498,7 +427,7 @@ export default function Home() {
                 architecture
               </span>
               <h3 className="text-white font-bold tracking-tighter text-xl uppercase">
-                BAHANA TOTALINDO TEKNIK
+                {company.name}
               </h3>
             </div>
             <p className="text-slate-500 label-md uppercase tracking-widest leading-loose">
@@ -539,7 +468,7 @@ export default function Home() {
                 <li>
                   <Link
                     className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#about"
+                    href="/about"
                   >
                     About
                   </Link>
@@ -547,7 +476,7 @@ export default function Home() {
                 <li>
                   <Link
                     className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#services"
+                    href="/services"
                   >
                     Services
                   </Link>
@@ -555,7 +484,7 @@ export default function Home() {
                 <li>
                   <Link
                     className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#"
+                    href="/portfolio"
                   >
                     Portfolio
                   </Link>
@@ -567,38 +496,16 @@ export default function Home() {
                 Technical
               </h4>
               <ul className="space-y-4">
-                <li>
-                  <Link
-                    className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#"
-                  >
-                    Civil
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#"
-                  >
-                    MEP
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#"
-                  >
-                    HVAC
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest"
-                    href="#"
-                  >
-                    Interior
-                  </Link>
-                </li>
+                {services.map(s => (
+                  <li key={s.id}>
+                    <Link
+                      className="text-slate-500 hover:text-white transition-opacity duration-300 label-md uppercase tracking-widest block truncate max-w-[150px]"
+                      href="/services"
+                    >
+                      {s.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -608,39 +515,35 @@ export default function Home() {
             </h4>
             <div className="space-y-4 text-slate-500 label-md uppercase tracking-widest leading-loose">
               <p className="normal-case">
-                Harapan Indah, Ruko Symphony Blok HX No.15,
-                <br />
-                Jl. Symphony Pusaka Rakyat,
-                <br />
-                Kec. Tarumajaya, Bekasi, Jawa Barat.
+                {company.address}
               </p>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">call</span>
                 <a
-                  href="tel:02189442250"
+                  href={`tel:${company.phone.replace(/\s+/g, "")}`}
                   className="hover:text-white transition-colors"
                 >
-                  021 - 89442250
+                  {company.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">chat</span>
                 <a
-                  href="https://wa.me/6281282404353"
+                  href={`https://wa.me/${company.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  0812 82 404 353
+                  +{company.whatsapp.replace(/(\d{2})(\d{3})(\d{4})(\d+)/, "$1 $2-$3-$4")}
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">mail</span>
                 <a
-                  href="mailto:bahana.tteknik@gmail.com"
+                  href={`mailto:${company.email}`}
                   className="normal-case hover:text-white transition-colors"
                 >
-                  bahana.tteknik@gmail.com
+                  {company.email}
                 </a>
               </div>
             </div>
@@ -664,7 +567,7 @@ export default function Home() {
       {/* FAB for WhatsApp */}
       <a
         className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center"
-        href="https://wa.me/6281282404353"
+        href={`https://wa.me/${company.whatsapp}`}
         target="_blank"
         rel="noopener noreferrer"
       >
