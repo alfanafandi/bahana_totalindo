@@ -27,11 +27,11 @@ export async function POST(request: Request) {
           contentType: file.type,
         });
         return NextResponse.json({ success: true, url: blob.url });
-      } catch (blobError) {
+      } catch (blobError: any) {
         console.error("Vercel Blob upload failed:", blobError);
         return NextResponse.json({ 
           success: false, 
-          error: "Unggah gambar ke Vercel Blob gagal. Silakan periksa log integrasi Vercel Anda." 
+          error: `Unggah ke Vercel Blob gagal: ${blobError.message || "Periksa token Anda"}` 
         }, { status: 500 });
       }
     }
