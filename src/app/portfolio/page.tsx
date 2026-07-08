@@ -26,7 +26,7 @@ export default async function PortfolioPage({ searchParams }: PageProps) {
 
       <main className="min-h-screen pb-24 font-inter">
         {/* Hero Section */}
-        <section className="relative h-[530px] flex items-end px-8 pb-20 overflow-hidden bg-primary-container">
+        <section className="relative h-[360px] sm:h-[530px] flex items-end px-4 sm:px-8 pb-12 sm:pb-20 overflow-hidden bg-primary-container">
           <div className="absolute inset-0 z-0">
             <img 
               className="w-full h-full object-cover opacity-40 mix-blend-overlay" 
@@ -36,22 +36,22 @@ export default async function PortfolioPage({ searchParams }: PageProps) {
           </div>
           <div className="relative z-10 max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-on-primary-container mb-4">Engineering Portfolio</p>
-            <h1 className="text-white font-headline text-5xl md:text-7xl font-bold tracking-tight leading-none mb-6">Built for Industrial Integrity.</h1>
+            <h1 className="text-white font-headline text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-none mb-6">Built for Industrial Integrity.</h1>
             <div className="h-1 w-24 bg-on-tertiary-container"></div>
           </div>
         </section>
 
         {/* Filter / Stats Bar */}
-        <section className="px-8 -translate-y-1/2 flex flex-wrap gap-4 z-20 relative">
-          <div className="bg-surface-container-lowest p-6 flex flex-col items-start min-w-[200px] shadow-2xl">
+        <section className="px-4 sm:px-8 mt-6 sm:-mt-16 flex flex-col sm:flex-row gap-4 z-20 relative">
+          <div className="bg-surface-container-lowest p-6 flex flex-col items-start w-full sm:w-auto sm:flex-1 shadow-2xl">
             <span className="text-primary font-headline text-3xl font-extrabold tracking-tight">500+</span>
             <span className="text-secondary text-[10px] font-bold uppercase tracking-widest">Projects Delivered</span>
           </div>
-          <div className="bg-surface-container-lowest p-6 flex flex-col items-start min-w-[200px] shadow-2xl">
+          <div className="bg-surface-container-lowest p-6 flex flex-col items-start w-full sm:w-auto sm:flex-1 shadow-2xl">
             <span className="text-primary font-headline text-3xl font-extrabold tracking-tight">12</span>
             <span className="text-secondary text-[10px] font-bold uppercase tracking-widest">Global Partners</span>
           </div>
-          <div className="bg-surface-container-lowest p-6 flex flex-col items-start min-w-[200px] shadow-2xl border-l-4 border-primary">
+          <div className="bg-surface-container-lowest p-6 flex flex-col items-start w-full sm:w-auto sm:flex-1 shadow-2xl border-l-4 border-primary">
             <span className="text-primary font-headline text-3xl font-extrabold tracking-tight">ISO-9001</span>
             <span className="text-secondary text-[10px] font-bold uppercase tracking-widest">Certified Quality</span>
           </div>

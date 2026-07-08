@@ -29,7 +29,7 @@ export default async function Home() {
               <span className="inline-block bg-primary-container text-on-primary-container px-4 py-1 text-xs font-black tracking-[0.2em] uppercase mb-6 rounded-sm">
                 Kontraktor Sipil Terkemuka
               </span>
-              <h2 className="text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter mb-8">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter mb-8">
                 Keunggulan Teknik. <br />
                 <span className="text-secondary-fixed">
                   Membangun Masa Depan.
