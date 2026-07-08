@@ -15,7 +15,7 @@ export default async function ServicesPage() {
       <main className="max-w-7xl mx-auto px-6 md:px-12 py-16 font-inter">
         <header className="mb-24">
           <div className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-[0.2em] uppercase rounded-full mb-6">Industrial Precision</div>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-primary leading-none mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-primary leading-none mb-8">
               ENGINEERING<br/>
               EXCELLENCE.
           </h1>

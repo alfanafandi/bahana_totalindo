@@ -13,13 +13,13 @@ export default async function AboutPage() {
       <Navbar />
       <main className="min-h-screen font-inter">
         {/* Hero Section */}
-        <section className="relative h-[707px] flex items-center overflow-hidden bg-primary">
+        <section className="relative h-[450px] sm:h-[707px] flex items-center overflow-hidden bg-primary">
           <div className="absolute inset-0 z-0 bg-primary">
             <img alt="Industrial Construction Site" className="w-full h-full object-cover object-top opacity-50 mix-blend-multiply" src="/assets/portofolio/img337.jpg"/>
           </div>
-          <div className="container mx-auto px-8 relative z-10">
+          <div className="container mx-auto px-4 sm:px-8 relative z-10">
             <div className="max-w-4xl space-y-6">
-              <h2 className="text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter">INTEGRITAS<br/>STRUKTURAL.</h2>
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter">INTEGRITAS<br/>STRUKTURAL.</h2>
               <p className="text-xl text-primary-fixed-dim max-w-2xl font-light leading-relaxed">
                 PT. Bahana Totalindo Teknik menghadirkan solusi rekayasa dan konstruksi dengan tingkat presisi tinggi untuk lanskap industri Indonesia. Kami membangun fondasi untuk masa depan.
               </p>

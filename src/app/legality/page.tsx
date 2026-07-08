@@ -20,7 +20,7 @@ export default function LegalityPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div className="max-w-3xl">
               <span className="inline-block px-3 py-1 bg-primary-container text-white text-[10px] tracking-[0.3em] font-bold uppercase mb-6 rounded-sm">Regulatory Compliance</span>
-              <h2 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">LEGALITAS &amp; SERTIFIKASI</h2>
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">LEGALITAS &amp; SERTIFIKASI</h2>
               <p className="text-xl text-primary-fixed-dim font-light leading-relaxed max-w-2xl border-l-4 border-primary-container pl-6">
                 Menjamin integritas operasional dan standar kualitas tinggi melalui kepatuhan hukum yang menyeluruh serta sertifikasi internasional.
               </p>

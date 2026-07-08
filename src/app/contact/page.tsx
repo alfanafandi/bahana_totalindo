@@ -8,17 +8,17 @@ export default function ContactPage() {
 
       <main className="min-h-screen">
         {/* Hero Section / Context Header */}
-        <section className="bg-primary-container text-white py-24 px-8 relative overflow-hidden">
+        <section className="bg-primary-container text-white py-16 sm:py-24 px-4 sm:px-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-20 bg-[url('/assets/portofolio/img336.jpg')] bg-cover bg-top" data-alt="close up of industrial architectural blueprints with professional engineering tools and drafting compass on a clean desk"></div>
           <div className="relative z-10 max-w-6xl mx-auto">
             <p className="uppercase tracking-widest text-on-primary-container font-bold text-sm mb-4">Inquiry &amp; Consultation</p>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-6">Build the Future <br/>With Precision.</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-6">Build the Future <br/>With Precision.</h2>
             <div className="w-24 h-2 bg-on-tertiary-container mb-8"></div>
           </div>
         </section>
 
         {/* Main Content Canvas */}
-        <section className="max-w-7xl mx-auto px-8 -mt-16 relative z-20 pb-24">
+        <section className="max-w-7xl mx-auto px-4 sm:px-8 -mt-12 sm:-mt-16 relative z-20 pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 shadow-2xl overflow-hidden rounded-lg">
             {/* Contact Form Section */}
             <div className="lg:col-span-7 bg-surface-container-lowest p-8 md:p-16">
