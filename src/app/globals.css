@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-on-tertiary-fixed-variant: #773205;
   --color-tertiary-fixed-dim: #ffb691;
