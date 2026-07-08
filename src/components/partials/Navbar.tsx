@@ -9,10 +9,10 @@ export default function Navbar() {
 
   return (
     <header className="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
-      <nav className="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+      <nav className="flex justify-between items-center px-4 sm:px-8 py-4 max-w-full mx-auto">
         <Link href="/" className="flex items-center gap-3">
           <img src="/assets/services/img21.jpg" alt="BTT Logo" className="h-10 w-auto object-contain rounded" />
-          <h1 className="text-xl font-black text-blue-900 dark:text-white tracking-tighter uppercase font-inter hidden sm:block">
+          <h1 className="text-xl font-black text-blue-900 dark:text-white tracking-tighter uppercase font-inter hidden lg:block">
             BAHANA TOTALINDO TEKNIK
           </h1>
         </Link>
